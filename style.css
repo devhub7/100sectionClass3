@@ -1,0 +1,89 @@
+body {
+	font-size: 16px;
+	color: #9e9e9e;
+	
+}
+section.video-area {
+    position: relative;
+	padding: 80px 0;
+}
+
+.video-area-bg {
+	   background: url(assets/img/video-bg.jpg);
+    background-position: center;
+    background-size: cover;
+	background-color: #ddd;
+    position: absolute;
+    height: 100%;
+    width: 45%;
+    top: 0;
+    left: 0;
+    content: "";	
+	box-shadow: 1px 1px 5px 0px #333;
+}
+a.mfp-iframe.video-play-btn {
+    display: inline-block;
+    background: #159362;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 30px;
+    color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    right: -50px;
+    top: 50%;
+    margin-top: -50px;
+    padding-left: 10px;
+}
+
+ul.check-icon {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 16px;
+    color: #666;
+}
+/*How to Define an Icon Using CSS Pseudo-Elements
+Define Common CSS for all Icons
+Firstly, there are some common CSS properties that apply to all icons. It’s best to get this out of the way first in your CSS so that your icon definitions because simple.
+
+Reference Individual Icons
+There are four important parts to include when referencing any individual icon:
+
+1. Set the pseudo-element to match either the ::before or ::after you used in the previous common set up step
+2. Set the font-family to Font Awesome 5 Free or Font Awesome 5 Pro (depending on which one you are using)
+3. Set the font-weight: 900 (Solid), 400 (Regular or Brands), 300 (Light)
+4. Set the content to the unicode value of one of our icons*/
+  
+/* Step 1: Common Properties: All required to make icons render reliably */
+ ul.check-icon li::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Step 2: Reference Individual Icons */
+ ul.check-icon li:before {
+	font-family: "Font Awesome 5 Free";
+	content:"\f00c";
+	font-weight: 900;
+}
+ul.check-icon li:before {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    color: #159362;
+}
+
+ul.check-icon li {
+    position: relative;
+    padding-left: 30px;
+    padding-bottom: 7px;
+}
+ul.check-icon li a {
+    color: #666;
+}
